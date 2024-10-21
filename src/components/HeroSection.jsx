@@ -6,6 +6,11 @@ const HeroSection = () => {
   const imgRef = useRef(null);
   const textRef = useRef(null);
 
+
+  useGSAP(() => {
+    
+  })
+
   return (
     <section className="h-full py-24 grid grid-cols-12 px-28 w-auto relative">
       <div className="col-span-8 space-y-7">
