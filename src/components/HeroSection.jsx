@@ -6,12 +6,21 @@ import PageEndSvg from "../images/Page_end.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 const HeroSection = () => {
+  // Gsap Plugin
+  gsap.registerPlugin(useGSAP);
+
+  // Nabvar Ref
   const chevronRef = useRef(null);
   const dropdownRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isUnderlined, setIsUnderlined] = useState(false);
+
+  // HeroSection Ref
   const imgRef = useRef(null);
   const textRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
-  gsap.registerPlugin(useGSAP);
+  const underlineRef = useRef(null);
+
+  // Gsap Animations Starts
   const tl = gsap.timeline();
 
   // GSAP animation for dropdown visibility on hover
@@ -37,6 +46,7 @@ const HeroSection = () => {
     });
   }, [isHovered]);
 
+  // GSAP animation for Herosection
   useGSAP(() => {
     tl.from(imgRef.current, {
       x: 100,
@@ -44,20 +54,30 @@ const HeroSection = () => {
       duration: 0.6,
       delay: 0.6,
     });
+
     tl.from(
       textRef.current,
       {
         y: 50,
         opacity: 0,
         duration: 0.6,
+        scrub: 2,
       },
       "-=0.3"
     );
   });
 
+  // GSAP animation for underline
+  useGSAP(() => {
+    gsap.to(underlineRef.current, {
+      scaleX: isUnderlined ? 1 : 0, // Scale to show/hide the underline
+      duration: 0.1,
+    });
+  }, [isUnderlined]);
+
   return (
     <div className="h-full">
-      <section className="h-[115px] w-full lg:px-32 px-8 flex justify-between">
+      <section className="h-[120px] w-full lg:px-32 px-8 flex justify-between">
         {/* Logo Section */}
         <div className="flex w-full h-full justify-between items-center">
           <img
@@ -109,35 +129,52 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <section className="py-24 grid grid-cols-12 px-32 w-auto relative">
-        <div ref={textRef} className="col-span-8 space-y-5">
-          <div className="">
-            <div className="handwritten text-[120px]">The Dalai Lama's</div>
-            <div className="uppercase font-bold tracking-[0.132em] text-[74px]">
-              Guide to Happiness
+      <section className="py-14 lg:py-24 lg:grid lg:grid-cols-12 lg:px-32 w-auto  ">
+        <div className="px-6">
+          <div className=" order-1 top-30  lg:right-[-180px] z-10 flex items-center justify-center">
+            <img
+              className="h-[80%] w-[90%] object-cover lg:h-[1000px] lg:w-[1000px]"
+              ref={imgRef}
+              src={Lama}
+              alt="Dalai Lama"
+            />
+          </div>
+          <div
+            ref={textRef}
+            className="mt-12 md:mt-0 lg:col-span-8 lg:space-y-5 relative space-y-4"
+          >
+            <div
+              className="flex flex-col h-fit w-full handwritten text-xl lg:text-[120px] relative lg:inline-block cursor-pointer"
+              onMouseEnter={() => setIsUnderlined(true)}
+              onMouseLeave={() => setIsUnderlined(false)}
+            >
+              The Dalai Lama's
+              <div
+                ref={underlineRef}
+                className="w-fit absolute top-[30px] lg:top-[70px] left-20 h-[2px] bg-black scale-x-0 transition-transform font-serif text-"
+                style={{ width: "300px" }} // Make it full width
+              ></div>
+              <div
+                className="pt-8 uppercase font-bold 
+            leading-[1.2] tracking-wider lg:tracking-[0.132em] text-6xl lg:text-[74px]"
+              >
+                Guide to Happiness
+              </div>
             </div>
+
+            <div className=" text-xl font-normal tracking-wider leading-relaxed lg:text-[26px] md:font-medium lg:tracking-widest md:leading-loose lg:mr-32">
+              We went halfway around the world to find out what it actually
+              takes to become happier. Journey with us and learn how to train
+              your mind to be happier over time alongside the most qualified
+              people on the planet - including the Dalai Lama.
+            </div>
+            <button className="py-4 px-8 bg-black text-white rounded-[50px] font-semibold md:leanding-loose text-[20px]">
+              Join the Course
+            </button>
           </div>
-          <div className="text-[26px] font-medium tracking-widest leading-loose mr-32">
-            We went halfway around the world to find out what it actually takes
-            to become happier. Journey with us and learn how to train your mind
-            to be happier over time alongside the most qualified people on the
-            planet - including the Dalai Lama.
-          </div>
-          <button className="py-4 px-8 bg-black text-white rounded-[50px] font-semibold leanding-loose text-[20px]">
-            Join the Course
-          </button>
-        </div>
-        <div className="col-span-4"></div>
-        <div className="absolute top-0 right-[-180px] z-10">
-          <img
-            ref={imgRef}
-            src={Lama}
-            style={{ height: "1000px", width: "1000px" }}
-            alt="Dalai Lama"
-          />
         </div>
       </section>
-      <div className="w-full bottom-[-32px] absolute z-0">
+      <div className="w-full lg:bottom-[-32px] absolute z-0">
         <img className="" src={PageEndSvg} alt="endsvg" />
       </div>
     </div>
