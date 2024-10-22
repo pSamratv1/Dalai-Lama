@@ -24,3 +24,7 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.lowerText {
+  color: #291217;
+  font-family: "Galano Grotesque", sans-serif;
+}

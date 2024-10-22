@@ -76,8 +76,8 @@ const HeroSection = () => {
   }, [isUnderlined]);
 
   return (
-    <div className="h-full">
-      <section className="h-[120px] w-full lg:px-32 px-8 flex justify-between">
+    <div className="h-full overflow-x-hidden flex flex-col">
+      <section className="fixed h-[120px] w-full lg:px-32 px-8 flex justify-between bg-[#f4f3e9] z-20">
         {/* Logo Section */}
         <div className="flex w-full h-full justify-between items-center">
           <img
@@ -129,11 +129,11 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <section className="py-14 lg:py-24 lg:grid lg:grid-cols-12 lg:px-32 w-auto  ">
-        <div className="px-6">
-          <div className=" order-1 top-30  lg:right-[-180px] z-10 flex items-center justify-center">
+      <section className="py-14 lg:py-24 lg:grid lg:grid-cols-12 md:px-12 lg:px-20 relative flex-1 md:py-32">
+        <div className="px-6 md:px-0 w-screen ">
+          <div className=" max-w-[80%] lg:max-w-[50%] md:max-w-[35%] sm:max-w-[35%] top-30  z-10 flex items-center justify-center md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:top-20  h-fit">
             <img
-              className="h-[80%] w-[90%] object-cover lg:h-[1000px] lg:w-[1000px]"
+              className=" w-full  object-contain lg:right-20"
               ref={imgRef}
               src={Lama}
               alt="Dalai Lama"
@@ -141,28 +141,28 @@ const HeroSection = () => {
           </div>
           <div
             ref={textRef}
-            className="mt-12 md:mt-0 lg:col-span-8 lg:space-y-5 relative space-y-4"
+            className="mt-12 md:mt-0 lg:col-span-8 lg:space-y-5 relative space-y-4 lg:pr-[40%] md:pr-[35%] md:px-8 w-full"
           >
             <div
-              className="flex flex-col h-fit w-full handwritten text-xl lg:text-[120px] relative lg:inline-block cursor-pointer"
+              className="flex flex-col h-fit w-full handwritten text-xl lg:text-[60px] relative lg:inline-block cursor-pointer md:text-[60px]"
               onMouseEnter={() => setIsUnderlined(true)}
               onMouseLeave={() => setIsUnderlined(false)}
             >
               The Dalai Lama's
               <div
                 ref={underlineRef}
-                className="w-fit absolute top-[30px] lg:top-[70px] left-20 h-[2px] bg-black scale-x-0 transition-transform font-serif text-"
+                className="w-fit absolute top-[30px] lg:top-[30px] left-20 h-[2px] bg-black scale-x-0 transition-transform font-serif "
                 style={{ width: "300px" }} // Make it full width
               ></div>
               <div
-                className="pt-8 uppercase font-bold 
-            leading-[1.2] tracking-wider lg:tracking-[0.132em] text-6xl lg:text-[74px]"
+                className="lowerText pt-8 uppercase font-bold
+            leading-[1.2] tracking-wider lg:tracking-[0.132em] text-xl lg:text-[60px] md:text-[30px]"
               >
                 Guide to Happiness
               </div>
             </div>
 
-            <div className=" text-xl font-normal tracking-wider leading-relaxed lg:text-[26px] md:font-medium lg:tracking-widest md:leading-loose lg:mr-32">
+            <div className=" text-xl font-normal tracking-wider leading-relaxed lg:text-[26px] md:font-medium lg:tracking-widest md:leading-loose ">
               We went halfway around the world to find out what it actually
               takes to become happier. Journey with us and learn how to train
               your mind to be happier over time alongside the most qualified
@@ -172,9 +172,10 @@ const HeroSection = () => {
               Join the Course
             </button>
           </div>
+          <div className="lg:col-span-4"></div>
         </div>
       </section>
-      <div className="w-full lg:bottom-[-32px] absolute z-0">
+      <div className="w-full absolute z-0 md:bottom-0 sm:bottom-0 bottom-0">
         <img className="" src={PageEndSvg} alt="endsvg" />
       </div>
     </div>
