@@ -40,7 +40,7 @@ const HeroSection = () => {
 
   // GSAP animation for chevron rotation on hover
   useGSAP(() => {
-    gsap.to(".icon", {
+    gsap.to(chevronRef.current, {
       rotateX: isHovered ? 180 : 0,
       duration: 0.3,
     });
@@ -61,7 +61,6 @@ const HeroSection = () => {
         y: 50,
         opacity: 0,
         duration: 0.6,
-        scrub: 2,
       },
       "-=0.3"
     );
@@ -77,7 +76,7 @@ const HeroSection = () => {
 
   return (
     <div className="h-full overflow-x-hidden flex flex-col">
-      <section className="fixed h-[120px] w-full lg:px-32 px-8 flex justify-between bg-[#f4f3e9] z-20">
+      <section className="fixed h-[80px] w-full lg:px-32 px-8 flex justify-between bg-[#f4f3e9] z-20 ">
         {/* Logo Section */}
         <div className="flex w-full h-full justify-between items-center">
           <img

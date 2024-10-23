@@ -8,6 +8,7 @@ const App = () => {
     <div className="h-screen w-screen">
       <HeroSection />
       <Aboutsection />
+      <div className="h-full w-full"></div>
     </div>
   );
 };
