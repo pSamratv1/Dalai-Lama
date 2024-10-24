@@ -64,80 +64,88 @@ const TeacherSection = () => {
               <span className="flex handwritten text-6xl">best teachers</span>
               on the planet
             </div>
-            <div className="py-1 text-[16px] font-[500] tracking-[0.09rem] leading-[1.7]">
-              Our meditation teachers are renowned leaders in the feild. And because everyone is different, they offer a variety of approaches so you can find the best for you.
+            <div className="py-1 text-[18px] font-[400] tracking-[0.09rem] leading-[1.7]">
+              Our meditation teachers are renowned leaders in the feild. And
+              because everyone is different, they offer a variety of approaches
+              so you can find the best for you.
             </div>
           </div>
           <div
             ref={teachersRef}
-            className="flex flex-col space-y-9 sm:bg-red-400"
+            className="flex flex-col sm:grid sm:grid-cols-12 space-y-9 sm:bg-red-400 md:bg-yellow-400 items-center "
           >
-            <div className=" flex justify-center items-center relative">
-              <div className="absolute z-20 w-[140px]">
-                <img src={Circle} alt="" />
-              </div>
+            <div className="sm:col-span-4 sm:top-0">
+              <div className=" flex justify-center items-center relative">
+                <div className="absolute z-20 w-[140px]">
+                  <img src={Circle} alt="" />
+                </div>
 
-              <div className="w-[140px]">
-                <img src={Anuska} alt="" />
+                <div className="w-[140px]">
+                  <img src={Anuska} alt="" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3">
-              <div className="flex justify-center text-2xl font-semibold">
-                Anuska Fernandopulle
-              </div>
-              <div
-                className="flex text-[19px]
+              <div className="flex flex-col space-y-3">
+                <div className="flex justify-center text-2xl font-semibold sm:text-xl">
+                  Anuska Fernandopulle
+                </div>
+                <div
+                  className="flex text-[19px]
               font-normal text-center tracking-[0.08rem] leading-relaxed"
-              >
-                Anusha has practiced meditation for over 25 years, including
-                four years in full-time intensive training in monastries and
-                retreat center in the US, India and Sri Lanka.
+                >
+                  Anusha has practiced meditation for over 25 years, including
+                  four years in full-time intensive training in monastries and
+                  retreat center in the US, India and Sri Lanka.
+                </div>
               </div>
             </div>
 
-            <div className=" flex justify-center items-center relative">
-              <div className="absolute z-20 w-[140px]">
-                <img src={Circle1} alt="" />
-              </div>
+            <div className="sm:col-span-4 sm:min-h-[40vh]">
+              <div className=" flex justify-center items-center relative  sm:top-0">
+                <div className="absolute z-20 w-[140px]">
+                  <img src={Circle1} alt="" />
+                </div>
 
-              <div className="w-[140px]">
-                <img src={Sharon} alt="" />
+                <div className="w-[140px]">
+                  <img src={Sharon} alt="" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3">
-              <div className="flex justify-center text-2xl font-semibold">
-                Sharon Salzberg
-              </div>
-              <div
-                className="flex text-[19px]
+              <div className="flex flex-col space-y-3">
+                <div className="flex justify-center text-2xl font-semibold sm:text-xl">
+                  Sharon Salzberg
+                </div>
+                <div
+                  className="flex text-[19px] 
               font-normal text-center tracking-[0.08rem] leading-relaxed"
-              >
-                A towering figure in the meditation world, Sharon Salzberg is a
-                prominent teacher & New York Times best-selling author. She has
-                played a crucial role bringing mindfulness and lovingkindness
-                practices to the West.
+                >
+                  A towering figure in meditation world, Sharon Salzberg is a
+                  prominent teacher & New York Times best-selling author. She
+                  has played a crucial role bringing mindfulness and
+                  lovingkindness practices to the West.
+                </div>
               </div>
             </div>
-            <div className=" flex justify-center items-center relative">
-              <div className="absolute z-20 w-[140px]">
-                <img src={Circle2} alt="" />
-              </div>
+            <div className="sm:col-span-4">
+              <div className=" flex justify-center items-center relative">
+                <div className="absolute z-20 w-[140px]">
+                  <img src={Circle2} alt="" />
+                </div>
 
-              <div className="w-[140px]">
-                <img src={Joseph} alt="" />
+                <div className="w-[140px]">
+                  <img src={Joseph} alt="" />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3">
-              <div className="flex justify-center text-2xl font-semibold">
-                Joseph Goldstein
-              </div>
-              <div
-                className="flex text-[19px]
+              <div className="flex flex-col space-y-3">
+                <div className="flex justify-center text-2xl font-semibold sm:text-xl">
+                  Joseph Goldstein
+                </div>
+                <div
+                  className="flex text-[19px]
               font-normal text-center tracking-[0.08rem] leading-relaxed"
-              >
-                Joseph is one of the most respected meditation teachers in the
-                world — a key architect of the rise of mindfulness in our modern
-                society— with a sense of humor to boot.
+                >
+                  Joseph is one of the most respected meditation teachers in the
+                  world — a key architect of the rise of mindfulness in our
+                  modern society— with a sense of humor to boot.
+                </div>
               </div>
             </div>
           </div>
