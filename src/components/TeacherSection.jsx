@@ -76,13 +76,14 @@ const TeacherSection = () => {
       });
     });
   });
+
   // Mouse movement function for synchronized movement
   const handleMouseMove = (e) => {
     const { left, top, width, height } =
       teachersRef.current.getBoundingClientRect();
 
-    const xPos = ((e.clientX - left) / width - 0.5) * 80; // Movement factor
-    const yPos = ((e.clientY - top) / height - 0.5) * 80;
+    const xPos = ((e.clientX - left) / width - 0.5) * 8; // Adjust movement factor as needed
+    const yPos = ((e.clientY - top) / height - 0.5) * 8; // Adjust movement factor as needed
 
     // Move all images towards the mouse direction
     gsap.to(".teacher-image", {
@@ -112,19 +113,23 @@ const TeacherSection = () => {
   };
 
   return (
-    <div className="teacher_section w-full py-32 sm:px-4 md:px-8 lg:px-20">
+    <div className="teacher_section w-full py-32 sm:px-4 md:px-8 lg:px-40">
       <div className="h-full flex flex-col space-y-20 px-4 py-8">
-        <div className="flex-col space-y-9 lg:space-y-20 ">
-          <div ref={headingTextRef} className="flex flex-col  space-y-4 ">
+        <div
+          className="flex-col space-y-9 lg:space-y-20 "
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div ref={headingTextRef} className="flex flex-col space-y-4 ">
             <div className="flex lg:flex-col lg:items-center w-full text-[40px] font-bold leading-tight lg:text-[60px] space-x-4">
               <div>Learn from the</div>
-              <span className="flex handwritten text-6xl items-center  lg:text-[80px]">
+              <span className="flex handwritten text-6xl items-center lg:text-[80px]">
                 best teachers
               </span>
               <div>on the planet</div>
             </div>
             <div className="py-1 text-[18px] font-[400] tracking-[0.09rem] leading-[1.7] lg:text-2xl lg:px-[10vw] lg:text-center">
-              Our meditation teachers are renowned leaders in the feild. And
+              Our meditation teachers are renowned leaders in the field. And
               because everyone is different, they offer a variety of approaches
               so you can find the best for you.
             </div>
@@ -136,10 +141,10 @@ const TeacherSection = () => {
             {/* Column 1 */}
             <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
               <div className="relative">
-                <div className="absolute z-20 w-[140px] sm:w-[25vw]  lg:w-[250px]">
+                <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
                   <img src={Circle} alt="" />
                 </div>
-                <div className="w-[140px] sm:w-[25vw] lg:w-[250px]">
+                <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
                   <img src={Anuska} alt="" />
                 </div>
               </div>
@@ -150,19 +155,19 @@ const TeacherSection = () => {
                 Anuska Fernandopulle
               </div>
               <div className="text-[19px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal text-center sm:text-start tracking-[0.08rem] leading-relaxed">
-                Anusha has been in meditation practice over 25 years, including
-                four years in full-time intensive training in monasteries and
-                retreat centers in the US, India, and Sri Lanka.
+                Anusha has been in meditation practice for over 25 years,
+                including four years in full-time intensive training in
+                monasteries and retreat centers in the US, India, and Sri Lanka.
               </div>
             </div>
 
             {/* Column 2 */}
             <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
               <div className="relative">
-                <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px]">
+                <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
                   <img src={Circle1} alt="" />
                 </div>
-                <div className="w-[140px] sm:w-[25vw] lg:w-[250px]">
+                <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
                   <img src={Sharon} alt="" />
                 </div>
               </div>
@@ -183,10 +188,10 @@ const TeacherSection = () => {
             {/* Column 3 */}
             <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
               <div className="relative">
-                <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px]">
+                <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
                   <img src={Circle2} alt="" />
                 </div>
-                <div className="w-[140px] sm:w-[25vw] lg:w-[250px]">
+                <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
                   <img src={Joseph} alt="" />
                 </div>
               </div>
