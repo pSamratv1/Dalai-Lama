@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import phoneImg from "../images/iphone_app.webp";
 import gsap from "gsap";
 import PageEndSvg from "../images/smallcurve.svg";
@@ -17,12 +17,12 @@ const Aboutsection = () => {
   const textRef = useRef(null);
   const iphoneRef = useRef(null);
 
-  // Text Animation
+  // GSAP Animation
   useGSAP(() => {
     var mm = gsap.matchMedia();
     mm.add("(min-width:768px)", () => {
       gsap.to(iphoneRef.current, {
-        y: -350,
+        y: -250,
         duration: 0.4,
         scrollTrigger: {
           trigger: iphoneRef.current,
@@ -38,14 +38,14 @@ const Aboutsection = () => {
         duration: 0.6,
         scrollTrigger: {
           trigger: textRef.current,
-          start: "top 70%",
+          start: "top 80%",
 
           toggleActions: "restart none none none",
         },
         scrub: 2,
       });
     });
-    mm.add("(max-width:765px)", () => {
+    mm.add("(max-width:767px)", () => {
       gsap.to(iphoneRef.current, {
         y: -100,
         duration: 0.4,
@@ -74,7 +74,7 @@ const Aboutsection = () => {
 
   return (
     <div className="relative overflow-x-hidden flex flex-col">
-      <section className="px-8 sm:px-12 md:px-16 lg:px-44 h-[calc(100vh-160px)] w-full bg-[#ECC342] py-16 overflow-y-hidden ">
+      <section className="px-8 sm:px-12 md:px-16 lg:px-44 h-[calc(100vh-160px)] w-full bg-[#ECC342] py-16 md:py-40 overflow-y-hidden ">
         <div className="flex flex-col space-y-16 lg:grid lg:grid-cols-12 ">
           <div
             ref={textRef}
@@ -91,7 +91,7 @@ const Aboutsection = () => {
                 a habit you carry everywhere.
               </div>
               <div className="flex sm:justify-center lg:justify-start">
-                <button className="text-sm md:text-3xl w-full bg-black text-white font-medium py-3 md:py-5 rounded-[30px] sm:max-w-[240px] max-w-[40vw]">
+                <button className="text-sm md:text-2xl w-full bg-black text-white font-medium py-3 md:py-5 rounded-[30px] sm:max-w-[240px] max-w-[40vw]">
                   Try Free
                 </button>
               </div>
