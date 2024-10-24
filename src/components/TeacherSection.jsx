@@ -26,7 +26,31 @@ const TeacherSection = () => {
   // GSAP Animation
   useGSAP(() => {
     var mm = gsap.matchMedia();
-    mm.add("(min-width:768px)", () => {});
+    mm.add("(min-width:768px)", () => {
+      gsap.from(headingTextRef.current, {
+        opacity: 0,
+        y: 150,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: headingTextRef.current,
+          start: "top 85%",
+
+          toggleActions: "restart none none none",
+        },
+        scrub: 2,
+      });
+      gsap.from(teachersRef.current, {
+        opacity: 0,
+        y: 200,
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: teachersRef.current,
+          start: "top 90%",
+          toggleActions: "restart none none none",
+        },
+        scrub: 2,
+      });
+    });
     mm.add("(max-width:765px)", () => {
       gsap.from(headingTextRef.current, {
         opacity: 0,
@@ -47,7 +71,6 @@ const TeacherSection = () => {
         scrollTrigger: {
           trigger: teachersRef.current,
           start: "top 80%",
-          markers: true,
           toggleActions: "restart none none none",
         },
         scrub: 2,
@@ -55,16 +78,18 @@ const TeacherSection = () => {
     });
   });
   return (
-    <div className="teacher_section w-full py-20 ">
-      <div className="h-full flex flex-col space-y-20 px-4 ">
-        <div className="flex-col space-y-9 ">
-          <div ref={headingTextRef} className="flex flex-col space-y-4 ">
-            <div className="flex w-full text-[40px] font-bold leading-tight ">
-              Learn from the
-              <span className="flex handwritten text-6xl">best teachers</span>
-              on the planet
+    <div className="teacher_section w-full py-32 sm:px-4 md:px-8 lg:px-20">
+      <div className="h-full flex flex-col space-y-20 px-4 py-8">
+        <div className="flex-col space-y-9 lg:space-y-20 ">
+          <div ref={headingTextRef} className="flex flex-col  space-y-4 ">
+            <div className="flex lg:flex-col lg:items-center w-full text-[40px] font-bold leading-tight lg:text-[60px] space-x-4">
+              <div>Learn from the</div>
+              <span className="flex handwritten text-6xl items-center  lg:text-[80px]">
+                best teachers
+              </span>
+              <div>on the planet</div>
             </div>
-            <div className="py-1 text-[18px] font-[400] tracking-[0.09rem] leading-[1.7]">
+            <div className="py-1 text-[18px] font-[400] tracking-[0.09rem] leading-[1.7] lg:text-2xl lg:px-[10vw] lg:text-center">
               Our meditation teachers are renowned leaders in the feild. And
               because everyone is different, they offer a variety of approaches
               so you can find the best for you.
@@ -72,80 +97,75 @@ const TeacherSection = () => {
           </div>
           <div
             ref={teachersRef}
-            className="flex flex-col sm:grid sm:grid-cols-12 space-y-9 sm:bg-red-400 md:bg-yellow-400 items-center "
+            className="sm:grid sm:grid-cols-12 space-x-9 lg:space-x-16 sm:p-4 md:p-8 lg:p-12"
           >
-            <div className="sm:col-span-4 sm:top-0">
-              <div className=" flex justify-center items-center relative">
-                <div className="absolute z-20 w-[140px]">
+            {/* Column 1 */}
+            <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
+              <div className="relative">
+                <div className="absolute z-20 w-[140px] sm:w-[25vw]  lg:w-[250px]">
                   <img src={Circle} alt="" />
                 </div>
-
-                <div className="w-[140px]">
+                <div className="w-[140px] sm:w-[25vw] lg:w-[250px]">
                   <img src={Anuska} alt="" />
                 </div>
               </div>
-              <div className="flex flex-col space-y-3">
-                <div className="flex justify-center text-2xl font-semibold sm:text-xl">
-                  Anuska Fernandopulle
-                </div>
-                <div
-                  className="flex text-[19px]
-              font-normal text-center tracking-[0.08rem] leading-relaxed"
-                >
-                  Anusha has practiced meditation for over 25 years, including
-                  four years in full-time intensive training in monastries and
-                  retreat center in the US, India and Sri Lanka.
-                </div>
+              <div
+                className="text-2xl font-semibold text-center sm:text-xl lg:text-start
+                 sm:max-w-[200px] sm:break-words md:max-w-none"
+              >
+                Anuska Fernandopulle
+              </div>
+              <div className="text-[19px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal text-center sm:text-start tracking-[0.08rem] leading-relaxed">
+                Anusha has been in meditation practice over 25 years, including
+                four years in full-time intensive training in monasteries and
+                retreat centers in the US, India, and Sri Lanka.
               </div>
             </div>
 
-            <div className="sm:col-span-4 sm:min-h-[40vh]">
-              <div className=" flex justify-center items-center relative  sm:top-0">
-                <div className="absolute z-20 w-[140px]">
+            {/* Column 2 */}
+            <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
+              <div className="relative">
+                <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px]">
                   <img src={Circle1} alt="" />
                 </div>
-
-                <div className="w-[140px]">
+                <div className="w-[140px] sm:w-[25vw] lg:w-[250px]">
                   <img src={Sharon} alt="" />
                 </div>
               </div>
-              <div className="flex flex-col space-y-3">
-                <div className="flex justify-center text-2xl font-semibold sm:text-xl">
-                  Sharon Salzberg
-                </div>
-                <div
-                  className="flex text-[19px] 
-              font-normal text-center tracking-[0.08rem] leading-relaxed"
-                >
-                  A towering figure in meditation world, Sharon Salzberg is a
-                  prominent teacher & New York Times best-selling author. She
-                  has played a crucial role bringing mindfulness and
-                  lovingkindness practices to the West.
-                </div>
+              <div
+                className="text-2xl font-semibold text-center sm:text-xl 
+                 sm:max-w-[200px] sm:break-words flex w-full"
+              >
+                Sharon Salzberg
+              </div>
+              <div className="text-[19px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal text-center sm:text-start tracking-[0.08rem] leading-relaxed">
+                A towering figure in the meditation world, Sharon Salzberg is a
+                prominent teacher & New York Times best-selling author. She has
+                played a crucial role in bringing mindfulness and lovingkindness
+                practices to the West.
               </div>
             </div>
-            <div className="sm:col-span-4">
-              <div className=" flex justify-center items-center relative">
-                <div className="absolute z-20 w-[140px]">
+
+            {/* Column 3 */}
+            <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
+              <div className="relative">
+                <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px]">
                   <img src={Circle2} alt="" />
                 </div>
-
-                <div className="w-[140px]">
+                <div className="w-[140px] sm:w-[25vw] lg:w-[250px]">
                   <img src={Joseph} alt="" />
                 </div>
               </div>
-              <div className="flex flex-col space-y-3">
-                <div className="flex justify-center text-2xl font-semibold sm:text-xl">
-                  Joseph Goldstein
-                </div>
-                <div
-                  className="flex text-[19px]
-              font-normal text-center tracking-[0.08rem] leading-relaxed"
-                >
-                  Joseph is one of the most respected meditation teachers in the
-                  world — a key architect of the rise of mindfulness in our
-                  modern society— with a sense of humor to boot.
-                </div>
+              <div
+                className="text-2xl font-semibold text-center sm:text-xl lg:text-start
+                 sm:max-w-[200px] sm:break-words md:max-w-none"
+              >
+                Joseph Goldstein
+              </div>
+              <div className="text-[19px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal text-center sm:text-start tracking-[0.08rem] leading-relaxed">
+                Joseph is one of the most respected meditation teachers in the
+                world — a key architect of the rise of mindfulness in our modern
+                society — with a sense of humor to boot.
               </div>
             </div>
           </div>
