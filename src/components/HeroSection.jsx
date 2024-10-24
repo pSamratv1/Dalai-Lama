@@ -61,6 +61,7 @@ const HeroSection = () => {
         y: 50,
         opacity: 0,
         duration: 0.6,
+        stagger: 0.3,
       },
       "-=0.3"
     );
@@ -75,7 +76,7 @@ const HeroSection = () => {
   }, [isUnderlined]);
 
   return (
-    <div className="h-full overflow-x-hidden flex flex-col">
+    <div className="h-full overflow-hidden flex flex-col">
       <section className="fixed h-[80px] w-full lg:px-32 px-8 flex justify-between bg-[#f4f3e9] z-20 ">
         {/* Logo Section */}
         <div className="flex w-full h-full justify-between items-center">
@@ -128,11 +129,11 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <section className="py-14 lg:py-24 lg:grid lg:grid-cols-12 md:px-12 lg:px-20 relative flex-1 md:py-32">
-        <div className="px-6 md:px-0 w-screen ">
-          <div className=" max-w-[80%] lg:max-w-[50%] md:max-w-[35%] sm:max-w-[35%] top-30  z-10 flex items-center justify-center md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:top-20  h-fit">
+      <section className="top-[80px] py-14 lg:py-24 lg:grid lg:grid-cols-12 md:px-12 lg:px-20 relative flex-1 md:py-32 w-full">
+        <div className="px-6 md:px-0 w-screen space-y-8">
+          <div className="w-full top-30 flex  justify-center ">
             <img
-              className=" w-full  object-contain lg:right-20"
+              className="w-[40vw] flex  justify-center object-cover  lg:w-[55vw] md:w-[55vw] sm:w-[40vw] md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:bottom-20  lg:right-[-100px] h-fit   z-10 "
               ref={imgRef}
               src={Lama}
               alt="Dalai Lama"
@@ -140,21 +141,21 @@ const HeroSection = () => {
           </div>
           <div
             ref={textRef}
-            className="mt-12 md:mt-0 lg:col-span-8 lg:space-y-5 relative space-y-4 lg:pr-[40%] md:pr-[35%] md:px-8 w-full"
+            className="lg:col-span-8 lg:space-y-5 relative space-y-4 lg:pr-[50vw] md:pr-[35vw] md:px-8 w-full"
           >
             <div
-              className="flex flex-col h-fit w-full handwritten text-xl lg:text-[60px] relative lg:inline-block cursor-pointer md:text-[60px]"
+              className="flex flex-col h-fit w-full handwritten text-4xl lg:text-[60px] relative lg:inline-block cursor-pointer md:text-[60px]"
               onMouseEnter={() => setIsUnderlined(true)}
               onMouseLeave={() => setIsUnderlined(false)}
             >
               The Dalai Lama's
               <div
                 ref={underlineRef}
-                className="w-fit absolute top-[30px] lg:top-[30px] left-20 h-[2px] bg-black scale-x-0 transition-transform font-serif "
-                style={{ width: "300px" }} // Make it full width
+                className="w-fit absolute top-[33px] lg:top-[33px] left-12 h-[2px] bg-black scale-x-0 transition-transform font-serif "
+                style={{ width: "180px" }} // Make it full width
               ></div>
               <div
-                className="lowerText pt-8 uppercase font-bold
+                className="lowerText md:pt-8 uppercase font-bold
             leading-[1.2] tracking-wider lg:tracking-[0.132em] text-xl lg:text-[60px] md:text-[30px]"
               >
                 Guide to Happiness
@@ -167,7 +168,7 @@ const HeroSection = () => {
               your mind to be happier over time alongside the most qualified
               people on the planet - including the Dalai Lama.
             </div>
-            <button className="py-4 px-8 bg-black text-white rounded-[50px] font-semibold md:leanding-loose text-[20px]">
+            <button className="py-4 px-8 bg-black text-white rounded-[50px] font-semibold md:leanding-loose md:text-[20px]">
               Join the Course
             </button>
           </div>
