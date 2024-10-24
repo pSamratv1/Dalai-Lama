@@ -1,4 +1,7 @@
 import React, { useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 import Circle from "../images/circle.svg";
 import Circle1 from "../images/circle1.svg";
 import Circle2 from "../images/circle2.svg";
@@ -6,9 +9,6 @@ import Circle2 from "../images/circle2.svg";
 import Anuska from "../images/Anuska.webp";
 import Sharon from "../images/Sharon.webp";
 import Joseph from "../images/Joseph.webp";
-import gsap from "gsap";
-
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 // Register the ScrollTrigger plugin
@@ -18,7 +18,6 @@ const TeacherSection = () => {
   // Register GSAP Hook
   gsap.registerPlugin(useGSAP);
 
-  const container = document.querySelector("#container");
   // useRef
   const headingTextRef = useRef(null);
   const teachersRef = useRef(null);
@@ -77,6 +76,41 @@ const TeacherSection = () => {
       });
     });
   });
+  // Mouse movement function for synchronized movement
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } =
+      teachersRef.current.getBoundingClientRect();
+
+    const xPos = ((e.clientX - left) / width - 0.5) * 80; // Movement factor
+    const yPos = ((e.clientY - top) / height - 0.5) * 80;
+
+    // Move all images towards the mouse direction
+    gsap.to(".teacher-image", {
+      x: xPos,
+      y: yPos,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+
+    // Move all circles in the opposite direction
+    gsap.to(".teacher-circle", {
+      x: -xPos,
+      y: -yPos,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+  };
+
+  // Reset position on mouse leave
+  const handleMouseLeave = () => {
+    gsap.to([".teacher-image", ".teacher-circle"], {
+      x: 0,
+      y: 0,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+  };
+
   return (
     <div className="teacher_section w-full py-32 sm:px-4 md:px-8 lg:px-20">
       <div className="h-full flex flex-col space-y-20 px-4 py-8">
