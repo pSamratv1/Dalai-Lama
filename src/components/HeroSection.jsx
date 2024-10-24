@@ -162,7 +162,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className=" text-xl font-normal tracking-wider leading-relaxed lg:text-[26px] md:font-medium lg:tracking-widest md:leading-loose ">
+            <div className=" text-lg font-normal tracking-wider leading-relaxed lg:text-[26px] md:font-medium lg:tracking-widest md:leading-loose ">
               We went halfway around the world to find out what it actually
               takes to become happier. Journey with us and learn how to train
               your mind to be happier over time alongside the most qualified

@@ -6,6 +6,13 @@ import Circle2 from "../images/circle2.svg";
 import Anuska from "../images/Anuska.webp";
 import Sharon from "../images/Sharon.webp";
 import Joseph from "../images/Joseph.webp";
+import gsap from "gsap";
+
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const TeacherSection = () => {
   return (
@@ -13,8 +20,12 @@ const TeacherSection = () => {
       <div className="h-full flex flex-col space-y-20 px-4 ">
         <div className="flex-col space-y-9 ">
           <div className="flex flex-col space-y-8 ">
-            <div className=" text-[32px] font-bold leading-tight ">
-              Learn from the best teacher on the planet
+            <div className=" text-[40px] font-bold leading-tight ">
+              Learn from the
+              <span className="flex w-fit space-y-4">
+                <span className="handwritten text-6xl">best teachers</span>
+              </span>
+              on the planet
             </div>
             <div className="py-1 text-lg font-[500] tracking-[0.09rem] leading-[1.7]">
               Our meditation teachers are renowned leaders in the feild. And
@@ -71,7 +82,7 @@ const TeacherSection = () => {
             </div>
             <div className=" flex justify-center items-center relative">
               <div className="absolute z-20 w-[140px]">
-                <img src={Circle} alt="" />
+                <img src={Circle2} alt="" />
               </div>
 
               <div className="w-[140px]">

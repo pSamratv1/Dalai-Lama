@@ -19,19 +19,6 @@ const Aboutsection = () => {
 
   // Text Animation
   useGSAP(() => {
-    gsap.from(textRef.current, {
-      opacity: 0,
-      y: 100,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: textRef.current,
-        start: "top 70%",
-        end: "top 30%",
-        toggleActions: "restart none none none",
-      },
-      scrub: 2,
-    });
-
     var mm = gsap.matchMedia();
     mm.add("(min-width:768px)", () => {
       gsap.to(iphoneRef.current, {
@@ -45,10 +32,22 @@ const Aboutsection = () => {
           toggleActions: "restart none none none",
         },
       });
+      gsap.from(textRef.current, {
+        opacity: 0,
+        y: 100,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 70%",
+
+          toggleActions: "restart none none none",
+        },
+        scrub: 2,
+      });
     });
     mm.add("(max-width:765px)", () => {
       gsap.to(iphoneRef.current, {
-        y: -150,
+        y: -100,
         duration: 0.4,
         scrollTrigger: {
           trigger: iphoneRef.current,
@@ -58,12 +57,24 @@ const Aboutsection = () => {
           toggleActions: "restart none none none",
         },
       });
+      gsap.from(textRef.current, {
+        opacity: 0,
+        y: 100,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 90%",
+
+          toggleActions: "restart none none none",
+        },
+        scrub: 2,
+      });
     });
   });
 
   return (
     <div className="relative overflow-x-hidden flex flex-col">
-      <section className="px-8 sm:px-12 md:px-16 lg:px-44 h-[calc(100vh-160px)] w-full bg-[#ECC342] py-36 overflow-y-hidden">
+      <section className="px-8 sm:px-12 md:px-16 lg:px-44 h-[calc(100vh-160px)] w-full bg-[#ECC342] py-16 overflow-y-hidden ">
         <div className="flex flex-col space-y-16 lg:grid lg:grid-cols-12 ">
           <div
             ref={textRef}
@@ -74,22 +85,22 @@ const Aboutsection = () => {
                 <span className="lowerText  font-bold ">Drop in</span>
                 <span className="">daily</span>
               </div>
-              <div className="text-lg sm:text-xl lg:text-2xl lg:min-h-[13vh] font-normal leading-loose tracking-widest  text-opacity-90">
+              <div className="text-sm sm:text-xl lg:text-2xl lg:min-h-[13vh] font-normal leading-loose tracking-widest  text-opacity-90">
                 With the Ten Percent Happier app, you'll access practical
                 teachings alongside guided meditations to make mindfulness into
                 a habit you carry everywhere.
               </div>
               <div className="flex sm:justify-center lg:justify-start">
-                <button className="w-full bg-black text-white font-medium py-5 rounded-[30px] sm:max-w-[240px] max-w-[40vw]">
+                <button className="text-sm md:text-3xl w-full bg-black text-white font-medium py-3 md:py-5 rounded-[30px] sm:max-w-[240px] max-w-[40vw]">
                   Try Free
                 </button>
               </div>
             </div>
           </div>
           <div id="container" className="lg:col-span-6 lg:order-1">
-            <div className="flex lg:justify-center w-full pr-[172px] md:pr-0 pt-20 ">
+            <div className="flex lg:justify-center w-full pr-[172px] md:pr-0 pt-12 md:pt-20 ">
               <img
-                className="max-w-[40vw] sm:max-w-[30vw] md:max-w-[28vw] lg:max-w-[30vw]"
+                className="max-w-[41vw] sm:max-w-[30vw] md:max-w-[28vw] lg:max-w-[30vw]"
                 ref={iphoneRef}
                 src={phoneImg}
                 alt="Ten Percent Happiness App"
