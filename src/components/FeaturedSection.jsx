@@ -1,12 +1,15 @@
 import React from "react";
 import PageStart from "../images/brownstart.svg";
+
 import PageEnd from "../images/brownend.svg";
 
 const FeaturedSection = () => {
   return (
-    <section>
-      <div className="h-[70vh] w-full bg-[#291217]"></div>
-    </section>
+    <>
+      <img className="" src={PageStart} />
+      <section className="h-[70vh] bg-[#291217]"></section>
+      <img className="" src={PageEnd} />
+    </>
   );
 };
 

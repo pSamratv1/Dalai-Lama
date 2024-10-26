@@ -7,7 +7,7 @@ import FeaturedSection from "./components/FeaturedSection";
 
 const App = () => {
   return (
-    <div className="h-[60vh] w-screen">
+    <div className="h-screen w-screen">
       <HeroSection />
       <Aboutsection />
       <TeacherSection />

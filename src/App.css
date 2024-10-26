@@ -1,0 +1,5 @@
+.featured-section {
+  line-height: 0; /* Removes the line between elements */
+  margin: 0;
+  padding: 0;
+}

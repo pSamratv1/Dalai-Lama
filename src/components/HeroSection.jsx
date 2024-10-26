@@ -175,7 +175,7 @@ const HeroSection = () => {
           <div className="lg:col-span-4"></div>
         </div>
       </section>
-      <div className="w-full absolute z-0 md:bottom-0 sm:bottom-0 bottom-0">
+      <div className="w-full bottom-[-10px]">
         <img className="" src={PageEndSvg} alt="endsvg" />
       </div>
     </div>
