@@ -13,29 +13,37 @@ const FeaturedSection = () => {
   return (
     <>
       <img className="" src={PageStart} />
-      <section className="h-[60vh] py-20 bg-[#291217]">
-        <div className="px-6">
-          <div className="flex flex-col md:flex-row px-16 space-y-12">
-            <div className="flex  gap-4">
+      <section className="h-[40vh] py-20 bg-[#291217]">
+        <div className="flex flex-col px-6 space-y-10">
+          <div className="flex flex-col md:flex-row px-16 space-y-12 ">
+            <div className="flex  space-x-8 items-center">
               <img
-                className="h-[4vh] w-[35vw] mx-auto"
+                className="h-[3vh] w-[35vw] mx-auto"
                 src={NewYorkTimes}
                 alt="The New York Times"
               />
               <img className="w-[30vw] mx-auto" src={Rachel} alt="Rachael" />
             </div>
-            <div className="flex gap-4 items-center">
+            <div className="flex space-x-8 items-center px-8">
               <img
                 className="w-[20vw] mx-auto"
                 src={GmAmerica}
                 alt="Good Morning America"
               />
               <img
-                className="w-[40vw] mx-auto"
+                className="w-[30vw] mx-auto"
                 src={WashingTon}
                 alt="The Washington Post"
               />
             </div>
+          </div>
+          <div className="flex px-8 items-center">
+            <img className="w-[20vw] mx-auto" src={TheView} alt="The View" />
+            <img
+              className="h-[3vh] w-[20vw] mx-auto"
+              src={Trevor}
+              alt="The Trevor Noah Show"
+            />
           </div>
         </div>
       </section>
