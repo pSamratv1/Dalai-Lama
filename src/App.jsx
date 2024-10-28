@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import Aboutsection from "./components/Aboutsection";
 import TeacherSection from "./components/TeacherSection";
 import FeaturedSection from "./components/FeaturedSection";
+import Testimonial from "./components/Testimonial";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Aboutsection />
       <TeacherSection />
       <FeaturedSection />
+      <Testimonial />
     </div>
   );
 };
