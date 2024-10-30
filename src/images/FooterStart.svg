@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="57px" viewBox="0 0 1920 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <polygon id="path-1" points="5.33618459e-17 18 372.844856 0.378172 1114.81389 18 1593.45494 29.5173843 1920 12.5017859 1920 56.4392308 5.33618459e-17 56.4392308"></polygon>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Rectangle" fill="#281217" xlink:href="#path-1"></use>
+    </g>
+</svg>

@@ -7,6 +7,7 @@ import FeaturedSection from "./components/FeaturedSection";
 import Testimonial from "./components/Testimonial";
 import OurBookSection from "./components/OurBookSection";
 import OurPodcastSection from "./components/OurPodcastSection";
+import OurNewsLetter from "./components/OurNewsLetter";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Testimonial />
       <OurBookSection />
       <OurPodcastSection />
+      <OurNewsLetter />
     </div>
   );
 };
