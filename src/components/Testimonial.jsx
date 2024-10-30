@@ -2,8 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import LeftArrow from "../images/LeftArrow.svg";
 import RightArrow from "../images/RightArrow.svg";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Testimonial = () => {
+  // Register GSAP Hook
+  gsap.registerPlugin(useGSAP);
+
   const textRef = useRef(null);
   const [currentQuote, setCurrentQuote] = useState(0);
 
@@ -29,7 +33,7 @@ const Testimonial = () => {
   ];
 
   // Animation logic using GSAP
-  useEffect(() => {
+  useGSAP(() => {
     const fadeInOut = () => {
       const tl = gsap.timeline();
       tl.to(textRef.current, { opacity: 0, duration: 0.5, ease: "power2.in" })
@@ -51,15 +55,15 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="testimonial h-[50vh] px-4">
-      <div className="flex flex-col justify-center py-16 space-y-8">
+    <section className="testimonial h-[60vh] px-4">
+      <div className="flex flex-col justify-center py-20 space-y-8">
         <div className="text-center text-[16px] uppercase font-[600] tracking-[0.3rem]">
           Skeptics Speak
         </div>
         <div className="flex flex-col px-4 py-4 sm:justify-around space-y-4">
           <div
             ref={textRef}
-            className="min-h-[14vh] text-center text-2xl font-normal"
+            className="min-h-[21vh] text-center text-2xl font-normal"
           >
             {`" ${Quote[currentQuote].quote} "`}
           </div>

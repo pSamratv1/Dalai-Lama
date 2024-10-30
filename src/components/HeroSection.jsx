@@ -95,7 +95,9 @@ const HeroSection = () => {
               onMouseLeave={() => setIsHovered(false)}
             >
               Podcast
-              <IoChevronDown ref={chevronRef} className="icon" />
+              <div ref={chevronRef}>
+                <IoChevronDown className="icon" />
+              </div>
             </div>
             {isHovered && (
               <div
