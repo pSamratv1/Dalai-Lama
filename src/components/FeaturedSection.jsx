@@ -13,7 +13,7 @@ const FeaturedSection = () => {
   return (
     <>
       <img className="" src={PageStart} />
-      <section className="h-[40vh] py-20 bg-[#291217]">
+      <section className="h-[50vh] py-20 bg-[#291217]">
         <div className="flex flex-col px-6 space-y-10">
           <div className="flex flex-col md:flex-row px-16 space-y-12 ">
             <div className="flex  space-x-8 items-center">

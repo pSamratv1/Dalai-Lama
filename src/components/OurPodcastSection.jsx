@@ -18,19 +18,26 @@ const OurPodcastSection = () => {
   const imagesRef = useRef([]);
 
   useGSAP(() => {
-    const tl = gsap.timeline({
+    gsap.from(containerRef.current, {
+      scale: 0.9,
+      duration: 1,
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 80%",
-        end: "top 20%",
+        start: "top 100%",
+        end: "top 40%",
         scrub: 1,
       },
     });
-
-    tl.from(imagesRef.current, {
+    gsap.from(imagesRef.current, {
       scale: 0.7,
       gap: "-16px",
       duration: 1,
+      scrollTrigger: {
+        trigger: imagesRef.current,
+        start: "top 100%",
+        end: "top 40%",
+        scrub: 1,
+      },
     });
   });
 

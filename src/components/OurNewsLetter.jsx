@@ -19,12 +19,12 @@ const OurNewsLetter = () => {
 
   useGSAP(() => {
     gsap.from(containerRef.current, {
-      scale: 0.8,
+      scale: 0.7,
       duration: 1,
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 80%",
-        end: "top 20%",
+        start: "top 100%",
+        end: "top 40%",
         scrub: 1,
       },
     });

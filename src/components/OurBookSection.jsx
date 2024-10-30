@@ -26,7 +26,7 @@ const OurBookSection = () => {
       scrollTrigger: {
         trigger: textRef.current,
         start: "top 75%",
-        end: "top 50%",
+
         scrub: false,
       },
     });
@@ -36,7 +36,7 @@ const OurBookSection = () => {
       duration: 0.6,
       scrollTrigger: {
         trigger: bookRef.current,
-        start: "top 80%",
+        start: "top 100%",
         scrub: 1,
       },
     });
