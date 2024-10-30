@@ -1,15 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
 import PageStart from "../images/NewsletterStart.svg";
+import PageEnd from "../images/FooterStart.svg";
+
+import NewsLetterCircle from "../images/NewsLetterCiclr.svg";
+import NewsLetterFill from "../images/NewLetterFill.svg";
+import NewsLetterImg from "../images/NewsLetterImg.webp";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const OurNewsLetter = () => {
+  gsap.registerPlugin(useGSAP);
+  const containerRef = useRef(null);
+  const imagesRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(containerRef.current, {
+      scale: 0.8,
+      duration: 1,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: 1,
+      },
+    });
+    gsap.from(imagesRef.current, {
+      scale: 0.7,
+      duration: 1,
+      scrollTrigger: {
+        trigger: imagesRef.current,
+        start: "top 100%",
+        end: "top 40%",
+        scrub: 1,
+      },
+    });
+  });
   return (
     <section className="relative newsletter-section">
       <img className="top-0" src={PageStart} alt="" />
       <div className="bg-[#EBC341] py-20">
-        <div className="px-4">
-          <div className="flex flex-col space-y-4">
-            <div>The newsletter</div>
-            <div>
+        <div className="flex flex-col px-6 space-y-16">
+          <div className="flex flex-col space-y-6">
+            <div className="text-4xl font-semibold">The newsletter</div>
+            <div className="text-lg font-normal tracking-widest leading-8 ">
               Entertaining, insightful articles that will get your synapses
               firing and help you live a happier, more resilient, and more
               connected life.
@@ -22,7 +59,18 @@ const OurNewsLetter = () => {
               </div>
             </div>
           </div>
+          <div className="realtive flex justify-center items-center px-8">
+            <div className="absolute" ref={containerRef}>
+              <img className="absolute" src={NewsLetterFill} />
+              <img src={NewsLetterCircle} />
+            </div>
+
+            <img ref={imagesRef} className="w-[40vh]" src={NewsLetterImg} />
+          </div>
         </div>
+      </div>
+      <div className="absolute bottom-0">
+        <img src={PageEnd} alt="" />
       </div>
     </section>
   );

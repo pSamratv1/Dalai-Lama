@@ -31,7 +31,6 @@ const OurPodcastSection = () => {
     tl.from(imagesRef.current, {
       scale: 0.7,
       gap: "-16px",
-      stagger: 0.1,
       duration: 1,
     });
   });
