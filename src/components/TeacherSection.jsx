@@ -114,7 +114,7 @@ const TeacherSection = () => {
 
   return (
     <section className=" teacher_section relative w-full">
-      <div className="h-full w-full py-32 sm:px-4 md:px-8 lg:px-40">
+      <div className="h-full w-full py-12 sm:px-4 md:px-8 lg:px-40">
         <div className="h-full flex flex-col space-y-20 px-4 py-8">
           <div
             className="flex-col space-y-9 lg:space-y-20 "
@@ -122,9 +122,9 @@ const TeacherSection = () => {
             onMouseLeave={handleMouseLeave}
           >
             <div ref={headingTextRef} className="flex flex-col space-y-4 ">
-              <div className="flex lg:flex-col lg:items-center w-full text-[40px] font-bold leading-tight lg:text-[60px] space-x-4">
+              <div className="flex flex-col text-center lg:flex-col lg:items-center w-full text-[40px] font-bold leading-tight lg:text-[60px] space-x-4">
                 <div>Learn from the</div>
-                <span className="flex handwritten text-6xl items-center lg:text-[80px]">
+                <span className="flex handwritten text-center text-6xl justify-center lg:text-[80px]">
                   best teachers
                 </span>
                 <div>on the planet</div>
@@ -143,10 +143,10 @@ const TeacherSection = () => {
               <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
                 <div className="relative">
                   <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
-                    <img src={Circle} alt="" />
+                    <img src={Circle} />
                   </div>
                   <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
-                    <img src={Anuska} alt="" />
+                    <img src={Anuska} />
                   </div>
                 </div>
                 <div
@@ -167,15 +167,15 @@ const TeacherSection = () => {
               <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
                 <div className="relative">
                   <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
-                    <img src={Circle1} alt="" />
+                    <img src={Circle1} />
                   </div>
                   <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
-                    <img src={Sharon} alt="" />
+                    <img src={Sharon} />
                   </div>
                 </div>
                 <div
-                  className="text-2xl font-semibold text-center sm:text-xl 
-                 sm:max-w-[200px] sm:break-words flex w-full"
+                  className="text-2xl font-semibold text-center sm:text-xl lg:text-start
+                 sm:max-w-[200px] sm:break-words md:max-w-none"
                 >
                   Sharon Salzberg
                 </div>
@@ -191,10 +191,10 @@ const TeacherSection = () => {
               <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
                 <div className="relative">
                   <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
-                    <img src={Circle2} alt="" />
+                    <img src={Circle2} />
                   </div>
                   <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
-                    <img src={Joseph} alt="" />
+                    <img src={Joseph} />
                   </div>
                 </div>
                 <div
@@ -218,7 +218,6 @@ const TeacherSection = () => {
           </div>
         </div>
       </div>
-      
     </section>
   );
 };

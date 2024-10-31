@@ -42,7 +42,7 @@ const OurNewsLetter = () => {
   return (
     <section className="relative newsletter-section">
       <img className="top-0" src={PageStart} alt="" />
-      <div className="bg-[#EBC341] py-20">
+      <div className="bg-[#EBC341] py-14">
         <div className="flex flex-col px-6 space-y-16">
           <div className="flex flex-col space-y-6">
             <div className="text-4xl font-semibold">The newsletter</div>

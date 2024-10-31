@@ -45,7 +45,7 @@ const OurBookSection = () => {
   return (
     <section className="book-section h-full">
       <img src={BookStart} alt="" />
-      <div className="h-full bg-[#ECC342] py-16">
+      <div className="h-full bg-[#ECC342] py-12">
         <div className="flex flex-col px-4 space-y-10">
           <div ref={textRef} className="">
             <div className="flex flex-col justify-center items-start  space-y-4">

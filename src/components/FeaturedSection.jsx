@@ -15,32 +15,36 @@ const FeaturedSection = () => {
       <img className="" src={PageStart} />
       <section className="h-[50vh] py-20 bg-[#291217]">
         <div className="flex flex-col px-6 space-y-10">
-          <div className="flex flex-col md:flex-row px-16 space-y-12 ">
-            <div className="flex  space-x-8 items-center">
+          <div className="sm:relative flex flex-col md:flex-row px-8 sm:px-0 space-y-12 ">
+            <div className="flex  space-x-8 items-center sm:justify-around">
               <img
-                className="h-[3vh] w-[35vw] mx-auto"
+                className="h-[3vh] w-[35vw] mx-auto sm:w-[20vw]"
                 src={NewYorkTimes}
                 alt="The New York Times"
               />
-              <img className="w-[30vw] mx-auto" src={Rachel} alt="Rachael" />
-            </div>
-            <div className="flex space-x-8 items-center px-8">
               <img
-                className="w-[20vw] mx-auto"
+                className="w-[30vw] mx-auto  sm:w-[20vw]"
+                src={Rachel}
+                alt="Rachael"
+              />
+            </div>
+            <div className="sm:absolute flex space-x-8 items-center sm:justify-around">
+              <img
+                className="w-[20vw] mx-auto  sm:w-[20vw] sm:top-[-55px]"
                 src={GmAmerica}
                 alt="Good Morning America"
               />
               <img
-                className="w-[30vw] mx-auto"
+                className=" flex w-[30vw]  sm:w-[20vw]"
                 src={WashingTon}
                 alt="The Washington Post"
               />
             </div>
           </div>
-          <div className="flex px-8 items-center">
-            <img className="w-[20vw] mx-auto" src={TheView} alt="The View" />
+          <div className="flex px-8 items-center sm:justify-around">
+            <img className="w-[20vw]" src={TheView} alt="The View" />
             <img
-              className="h-[3vh] w-[20vw] mx-auto"
+              className="h-[3vh] sm:h-full w-[20vw]"
               src={Trevor}
               alt="The Trevor Noah Show"
             />

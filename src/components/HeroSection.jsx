@@ -131,11 +131,11 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <section className="top-[80px] py-14 lg:py-24 lg:grid lg:grid-cols-12 md:px-12 lg:px-20 relative flex-1 md:py-32 w-full">
+      <section className="top-[80px] py-4 lg:py-24 lg:grid lg:grid-cols-12 md:px-12 lg:px-20 relative flex-1 md:py-32 w-full">
         <div className="px-6 md:px-0 w-screen space-y-8">
           <div className="w-full top-30 flex  justify-center ">
             <img
-              className="w-[40vw] flex  justify-center object-cover  lg:w-[55vw] md:w-[55vw] sm:w-[40vw] md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:bottom-20  lg:right-[-100px] h-fit   z-10 "
+              className="w-[50vw] flex  justify-center object-cover  lg:w-[55vw] md:w-[55vw] sm:w-[40vw] md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:bottom-20  lg:right-[-100px] h-fit   z-10 "
               ref={imgRef}
               src={Lama}
               alt="Dalai Lama"
@@ -146,22 +146,22 @@ const HeroSection = () => {
             className="lg:col-span-8 lg:space-y-5 relative space-y-4 lg:pr-[50vw] md:pr-[35vw] md:px-8 w-full"
           >
             <div
-              className="flex flex-col h-fit w-full handwritten text-4xl lg:text-[60px] relative lg:inline-block cursor-pointer md:text-[60px]"
+              className="flex flex-col h-fit w-full handwritten text-5xl lg:text-[60px] relative lg:inline-block cursor-pointer md:text-[60px]"
               onMouseEnter={() => setIsUnderlined(true)}
               onMouseLeave={() => setIsUnderlined(false)}
             >
               The Dalai Lama's
               <div
                 ref={underlineRef}
-                className="w-fit absolute top-[33px] lg:top-[33px] left-12 h-[2px] bg-black scale-x-0 transition-transform font-serif "
-                style={{ width: "180px" }} // Make it full width
+                className="w-fit absolute top-[45px] lg:top-[33px] left-16 h-[2px] bg-black scale-x-0 transition-transform font-serif "
+                style={{ width: "250px" }} // Make it full width
               ></div>
-              <div
-                className="lowerText md:pt-8 uppercase font-bold
-            leading-[1.2] tracking-wider lg:tracking-[0.132em] text-xl lg:text-[60px] md:text-[30px]"
-              >
-                Guide to Happiness
-              </div>
+            </div>
+            <div
+              className="lowerText md:pt-8 uppercase font-bold
+            leading-[1.2] tracking-wider lg:tracking-[0.132em] text-3xl lg:text-[60px] md:text-[30px]"
+            >
+              Guide to Happiness
             </div>
 
             <div className=" text-lg font-normal tracking-wider leading-relaxed lg:text-[26px] md:font-medium lg:tracking-widest md:leading-loose ">

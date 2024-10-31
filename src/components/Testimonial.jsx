@@ -56,7 +56,7 @@ const Testimonial = () => {
 
   return (
     <section className="testimonial h-[70vh] px-4">
-      <div className="flex flex-col justify-center py-20 space-y-8">
+      <div className="flex flex-col justify-center py-14 space-y-8">
         <div className="text-center text-[16px] uppercase font-[600] tracking-[0.3rem]">
           Skeptics Speak
         </div>

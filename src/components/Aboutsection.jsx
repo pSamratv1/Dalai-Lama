@@ -51,7 +51,7 @@ const Aboutsection = () => {
         duration: 0.4,
         scrollTrigger: {
           trigger: iphoneRef.current,
-          start: "top 80%",
+          start: "top 100%",
           end: "top 40%",
           scrub: 2,
           toggleActions: "restart none none none",
@@ -74,7 +74,7 @@ const Aboutsection = () => {
 
   return (
     <div className="relative overflow-x-hidden flex flex-col">
-      <section className="px-8 sm:px-12 md:px-16 lg:px-44 h-[calc(100vh-160px)] w-full bg-[#ECC342] py-16 md:py-40 overflow-y-hidden ">
+      <section className="px-8 sm:px-12 md:px-16 lg:px-44 h-[calc(100vh-160px)] w-full bg-[#ECC342] py-12 md:py-40 overflow-y-hidden ">
         <div className="flex flex-col space-y-16 lg:grid lg:grid-cols-12 ">
           <div
             ref={textRef}
@@ -85,7 +85,7 @@ const Aboutsection = () => {
                 <span className="lowerText  font-bold ">Drop in</span>
                 <span className="">daily</span>
               </div>
-              <div className="text-sm sm:text-xl lg:text-2xl lg:min-h-[13vh] font-normal leading-loose tracking-widest  text-opacity-90">
+              <div className="text-[18px] sm:text-xl lg:text-2xl lg:min-h-[13vh] font-normal leading-relaxed tracking-widest  text-opacity-90">
                 With the Ten Percent Happier app, you'll access practical
                 teachings alongside guided meditations to make mindfulness into
                 a habit you carry everywhere.
