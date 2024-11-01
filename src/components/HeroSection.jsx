@@ -135,7 +135,7 @@ const HeroSection = () => {
         <div className="px-6  sm:px-0 sm:pr-8 w-screen space-y-8">
           <div className="w-full top-30 flex  justify-center ">
             <img
-              className="w-[50vw] flex  justify-center object-cover  lg:w-[55vw] md:w-[55vw] sm:w-[40vw] md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:bottom-20  lg:right-[-100px] h-fit   z-10 "
+              className="w-[50vw] flex  justify-center object-cover  lg:w-[55vw] md:w-[45vw] sm:w-[40vw] md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:-bottom-10 md:right-[-100px] lg:right-[-200px] h-fit   z-10 "
               ref={imgRef}
               src={Lama}
               alt="Dalai Lama"
@@ -143,7 +143,7 @@ const HeroSection = () => {
           </div>
           <div
             ref={textRef}
-            className="lg:col-span-8 lg:space-y-5 relative space-y-4 lg:pr-[50vw] md:pr-[35vw] md:px-8 w-full"
+            className="lg:col-span-8 lg:space-y-5 relative space-y-4 lg:pr-[35vw] md:pr-[35vw] md:px-8 w-full"
           >
             <div
               className="flex flex-col h-fit w-full handwritten text-5xl lg:text-[60px] relative lg:inline-block cursor-pointer md:text-[60px]"
@@ -164,7 +164,7 @@ const HeroSection = () => {
               Guide to Happiness
             </div>
 
-            <div className=" text-lg font-normal tracking-wider leading-relaxed lg:text-[26px] md:font-medium lg:tracking-widest md:leading-loose ">
+            <div className=" text-lg font-normal tracking-wider leading-relaxed lg:text-[20px] md:font-medium lg:tracking-widest md:leading-loose ">
               We went halfway around the world to find out what it actually
               takes to become happier. Journey with us and learn how to train
               your mind to be happier over time alongside the most qualified
@@ -174,7 +174,6 @@ const HeroSection = () => {
               Join the Course
             </button>
           </div>
-
         </div>
       </section>
       <div className="w-full bottom-[-10px]">
