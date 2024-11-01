@@ -24,7 +24,7 @@ const OurPodcastSection = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 100%",
-        end: "top 40%",
+        end: "top 0%",
         scrub: 1,
       },
     });
@@ -35,7 +35,7 @@ const OurPodcastSection = () => {
       scrollTrigger: {
         trigger: imagesRef.current,
         start: "top 100%",
-        end: "top 40%",
+        end: "top 0%",
         scrub: 1,
       },
     });

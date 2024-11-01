@@ -23,8 +23,8 @@ const OurNewsLetter = () => {
       duration: 1,
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 100%",
-        end: "top 40%",
+        start: "top 80%",
+        end: "top -10%",
         scrub: 1,
       },
     });
@@ -33,8 +33,8 @@ const OurNewsLetter = () => {
       duration: 1,
       scrollTrigger: {
         trigger: imagesRef.current,
-        start: "top 100%",
-        end: "top 40%",
+        start: "top 80%",
+        end: "top -10%",
         scrub: 1,
       },
     });
