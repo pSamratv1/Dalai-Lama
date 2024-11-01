@@ -43,7 +43,7 @@ const OurPodcastSection = () => {
 
   return (
     <section className="podcast-section w-full py-20">
-      <div className="px-6 flex flex-col space-y-16">
+      <div className=" px-8 sm:px-12 md:px-16 lg:px-44 flex flex-col space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="flex flex-col space-y-6 lg:order-2 lg:justify-center">
             <div className="text-4xl font-semibold">Our Podcasts</div>
@@ -60,18 +60,23 @@ const OurPodcastSection = () => {
               </div>
             </div>
           </div>
-          <div
-            ref={containerRef}
-            className="realtive flex justify-center items-center w-[70vw] sm:w-[60vw]"
-          >
-            <img className="absolute  p-8" src={Fill} alt="" />
-            <img className="absolute  p-8" src={Circle} alt="" />
+          <div className="flex lg:justify-center items-center">
+            <div
+              ref={containerRef}
+              className="grid justify-center items-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[30vw]"
+            >
+              <img className="absolute  p-8" src={Fill} alt="" />
+              <img className="absolute  p-8" src={Circle} alt="" />
 
-            <div ref={imagesRef} className="grid grid-cols-2 grid-rows-2 gap-6">
-              <img className="cols-span-1" src={Img1} alt="" />
-              <img className="cols-span-1" src={Img2} alt="" />
-              <img className="cols-span-1" src={Img3} alt="" />
-              <img className="cols-span-1" src={Img4} alt="" />
+              <div
+                ref={imagesRef}
+                className=" grid grid-cols-2 grid-rows-2 gap-6"
+              >
+                <img className="cols-span-1" src={Img1} alt="" />
+                <img className="cols-span-1" src={Img2} alt="" />
+                <img className="cols-span-1" src={Img3} alt="" />
+                <img className="cols-span-1" src={Img4} alt="" />
+              </div>
             </div>
           </div>
         </div>
