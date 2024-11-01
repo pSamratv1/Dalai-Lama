@@ -114,8 +114,8 @@ const TeacherSection = () => {
 
   return (
     <section className=" teacher_section relative w-full">
-      <div className="h-full w-full py-12 sm:px-4 md:px-8 lg:px-40">
-        <div className="h-full flex flex-col space-y-20 px-4 py-8">
+      <div className="h-full w-full py-12 px-8  sm:px-12 md:px-16 lg:px-44">
+        <div className="h-full flex flex-col space-y-20  py-8">
           <div
             className="flex-col space-y-9 lg:space-y-20 "
             onMouseMove={handleMouseMove}
@@ -137,22 +137,19 @@ const TeacherSection = () => {
             </div>
             <div
               ref={teachersRef}
-              className="sm:grid sm:grid-cols-12 space-x-9 lg:space-x-16 sm:p-4 md:p-8 lg:p-12"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 "
             >
               {/* Column 1 */}
-              <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
+              <div className="flex flex-col min-h-[40vh] items-center space-y-3">
                 <div className="relative">
                   <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
-                    <img src={Circle} />
+                    <img src={Circle} alt="Circle decoration" />
                   </div>
                   <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
-                    <img src={Anuska} />
+                    <img src={Anuska} alt="Anuska Fernandopulle" />
                   </div>
                 </div>
-                <div
-                  className="text-2xl font-semibold text-center sm:text-xl lg:text-start
-                 sm:max-w-[200px] sm:break-words md:max-w-none"
-                >
+                <div className="text-2xl font-semibold text-center sm:text-xl sm:text-start">
                   Anuska Fernandopulle
                 </div>
                 <div className="text-[19px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal text-center sm:text-start tracking-[0.08rem] leading-relaxed">
@@ -164,49 +161,40 @@ const TeacherSection = () => {
               </div>
 
               {/* Column 2 */}
-              <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
+              <div className="flex flex-col min-h-[40vh] items-center space-y-3">
                 <div className="relative">
                   <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
-                    <img src={Circle1} />
+                    <img src={Circle1} alt="Circle decoration" />
                   </div>
                   <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
-                    <img src={Sharon} />
+                    <img src={Sharon} alt="Sharon Salzberg" />
                   </div>
                 </div>
-                <div
-                  className="text-2xl font-semibold text-center sm:text-xl lg:text-start
-                 sm:max-w-[200px] sm:break-words md:max-w-none"
-                >
+                <div className="text-2xl font-semibold text-center sm:text-xl lg:text-start">
                   Sharon Salzberg
                 </div>
                 <div className="text-[19px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal text-center sm:text-start tracking-[0.08rem] leading-relaxed">
                   A towering figure in the meditation world, Sharon Salzberg is
-                  a prominent teacher & New York Times best-selling author. She
-                  has played a crucial role in bringing mindfulness and
-                  lovingkindness practices to the West.
+                  a prominent teacher & New York Times best-selling author.
                 </div>
               </div>
 
               {/* Column 3 */}
-              <div className="sm:col-span-4 flex flex-col min-h-[40vh] items-center space-y-3">
+              <div className="flex flex-col min-h-[40vh] items-center space-y-3">
                 <div className="relative">
                   <div className="absolute z-20 w-[140px] sm:w-[25vw] lg:w-[250px] teacher-circle">
-                    <img src={Circle2} />
+                    <img src={Circle2} alt="Circle decoration" />
                   </div>
                   <div className="w-[140px] sm:w-[25vw] lg:w-[250px] teacher-image">
-                    <img src={Joseph} />
+                    <img src={Joseph} alt="Joseph Goldstein" />
                   </div>
                 </div>
-                <div
-                  className="text-2xl font-semibold text-center sm:text-xl lg:text-start
-                 sm:max-w-[200px] sm:break-words md:max-w-none"
-                >
+                <div className="text-2xl font-semibold text-center sm:text-xl lg:text-start">
                   Joseph Goldstein
                 </div>
                 <div className="text-[19px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal text-center sm:text-start tracking-[0.08rem] leading-relaxed">
                   Joseph is one of the most respected meditation teachers in the
-                  world — a key architect of the rise of mindfulness in our
-                  modern society — with a sense of humor to boot.
+                  world — a key architect of mindfulness in our modern society.
                 </div>
               </div>
             </div>

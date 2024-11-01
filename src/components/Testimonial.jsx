@@ -21,7 +21,7 @@ const Testimonial = () => {
     {
       id: 2,
       quote:
-        "A friend asked me to take a two-week challenge with her — now I'm hooked! Just 10 minutes a day & in such a more positive mood.",
+        "A friend asked me to take a two-week challenge with her, now I'm hooked! Just 10 minutes a day & in such a more positive mood.",
       author: "Jessica F",
     },
     {
@@ -55,15 +55,15 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="testimonial h-[70vh] px-4">
-      <div className="flex flex-col justify-center py-14 space-y-8">
-        <div className="text-center text-[16px] uppercase font-[600] tracking-[0.3rem]">
+    <section className="testimonial h-[70vh] sm:h-[50vh] lg:h-[42.5vh] px-8  sm:px-12 md:px-16 lg:px-44">
+      <div className="flex flex-col justify-center py-14 sm:py-18 space-y-8">
+        <div className="text-center text-[16px] sm:text-[25px] uppercase font-[600] tracking-[0.3rem]">
           Skeptics Speak
         </div>
-        <div className="flex flex-col px-4 py-4 sm:justify-around space-y-4">
+        <div className="flex flex-col px-4 sm:px-16 md:px-24 lg:px-[10vw] sm:justify-around space-y-4">
           <div
             ref={textRef}
-            className="min-h-[21vh] text-center text-2xl font-normal"
+            className="min-h-[21vh] sm:min-h-[15vh] md:min-h-[12vh] lg:min-h-[10vh] text-center text-2xl font-normal"
           >
             {`" ${Quote[currentQuote].quote} "`}
           </div>

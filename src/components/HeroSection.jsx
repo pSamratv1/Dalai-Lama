@@ -131,8 +131,8 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <section className="top-[80px] py-4 lg:py-24 lg:grid lg:grid-cols-12 md:px-12 lg:px-20 relative flex-1 md:py-32 w-full">
-        <div className="px-6 md:px-0 w-screen space-y-8">
+      <section className="top-[80px] py-8 sm:px-12 lg:py-24 lg:grid lg:grid-cols-12 relative flex-1 md:py-32">
+        <div className="px-6  sm:px-0 sm:pr-8 w-screen space-y-8">
           <div className="w-full top-30 flex  justify-center ">
             <img
               className="w-[50vw] flex  justify-center object-cover  lg:w-[55vw] md:w-[55vw] sm:w-[40vw] md:absolute  md:bottom-0 sm:right-0 lg:absolute lg:bottom-20  lg:right-[-100px] h-fit   z-10 "
@@ -174,7 +174,7 @@ const HeroSection = () => {
               Join the Course
             </button>
           </div>
-          <div className="lg:col-span-4"></div>
+
         </div>
       </section>
       <div className="w-full bottom-[-10px]">
