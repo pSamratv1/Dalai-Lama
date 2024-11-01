@@ -26,7 +26,6 @@ const OurBookSection = () => {
       scrollTrigger: {
         trigger: textRef.current,
         start: "top 75%",
-
         scrub: false,
       },
     });
@@ -43,37 +42,46 @@ const OurBookSection = () => {
   });
 
   return (
-    <section className="book-section h-full ">
-      <img src={BookStart} alt="" />
-      <div className="h-full bg-[#ECC342] py-12">
-        <div className="flex flex-col  px-8  sm:px-12 md:px-16 lg:px-44 space-y-10">
-          <div ref={textRef} className="">
-            <div className="flex flex-col justify-center items-start  space-y-4">
+    <section className="book-section">
+      <img src={BookStart} alt="Decoration" />
+      <div className="h-full bg-[#ECC342] py-20">
+        <div className="flex flex-col px-8 sm:px-12 md:px-16 lg:px-44">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div
+              ref={textRef}
+              className="flex flex-col space-y-4 lg:justify-center"
+            >
               <div className="text-4xl font-semibold">Our books</div>
-              <div className="text-lg font-normal tracking-widest leading-8 ">
-                After a panic attack on line TV, ABC news anchor Dan Harris had
+              <div className="text-lg font-normal tracking-widest leading-8">
+                After a panic attack on live TV, ABC news anchor Dan Harris had
                 to make some changes. Harris accounts his journey from skeptic
                 to meditator.
               </div>
-              <div>
-                <div className="flex w-fit border-[2px] rounded-[40px] border-[#803401]">
-                  <button className="py-4 px-8 text-lg font-medium rounded-[40px] border-[1px] border-black">
-                    See All Books
-                  </button>
-                </div>
+              <div className="flex w-fit border-[2px] rounded-[40px] border-[#803401]">
+                <button className="py-4 px-8 text-lg font-medium rounded-[40px] border-[1px] border-black">
+                  See All Books
+                </button>
               </div>
             </div>
-          </div>
-          <div className="flex justify-center items-center h-full">
-            <div ref={bookRef} className="relative">
-              <img className="absolute" src={BookWhite} alt="" />
-              <img className="absolute" src={BookCircle} alt="" />
-              <img src={Books} alt="" />
+            <div className="flex justify-center items-center h-full w-[80vw] sm:w-[60vw] md:w-[40vw]">
+              <div ref={bookRef} className="relative ">
+                <img
+                  className="absolute"
+                  src={BookWhite}
+                  alt="Book decoration"
+                />
+                <img
+                  className="absolute"
+                  src={BookCircle}
+                  alt="Book decoration"
+                />
+                <img src={Books} alt="Books" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <img src={BookEnd} alt="" />
+      <img src={BookEnd} alt="Decoration" />
     </section>
   );
 };

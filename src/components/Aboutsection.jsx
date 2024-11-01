@@ -74,7 +74,7 @@ const Aboutsection = () => {
 
   return (
     <div className="relative overflow-x-hidden flex flex-col">
-      <section className=" h-[calc(100vh-160px)] w-full bg-[#ECC342] py-12 md:py-40 overflow-y-hidden ">
+      <section className="px-8 sm:px-12 md:px-16 lg:px-44 h-[calc(100vh-160px)] w-full bg-[#ECC342] py-12 md:py-40 overflow-y-hidden ">
         <div className="flex flex-col space-y-16 lg:grid lg:grid-cols-12 ">
           <div
             ref={textRef}
