@@ -15,7 +15,7 @@ const FooterSection = () => {
             <FaInstagram className="w-5 h-5" />
           </div>
         </div>
-        <div className="flex flex-col px-6 space-y-9">
+        <div className="flex flex-col  px-6 space-y-9">
           <div className="flex flex-col space-y-5">
             <div className="w-fit flex flex-col text-[#7D7D7D] pb-1 border-b-[#7D7D7D] border-b-[1px]">
               <div className="uppercase tracking-[0.18rem] text-[15px]">

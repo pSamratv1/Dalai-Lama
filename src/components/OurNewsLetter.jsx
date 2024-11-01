@@ -43,29 +43,38 @@ const OurNewsLetter = () => {
     <section className="relative newsletter-section">
       <img className="top-0" src={PageStart} alt="" />
       <div className="bg-[#EBC341] py-14">
-        <div className="flex flex-col px-6 space-y-16">
-          <div className="flex flex-col space-y-6">
-            <div className="text-4xl font-semibold">The newsletter</div>
-            <div className="text-lg font-normal tracking-widest leading-8 ">
-              Entertaining, insightful articles that will get your synapses
-              firing and help you live a happier, more resilient, and more
-              connected life.
-            </div>
-            <div>
-              <div className="flex w-fit border-[2px] rounded-[40px] border-[#803401]">
-                <button className="py-4 px-8 text-lg font-medium rounded-[40px] border-[1px] border-black">
-                  Read The Newsletter
-                </button>
+        <div className="flex flex-col  px-8 sm:px-12 md:px-16 lg:px-44 space-y-16 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="flex flex-col space-y-6 justify-center">
+              <div className="text-4xl font-semibold">The newsletter</div>
+              <div className="text-lg font-normal tracking-widest leading-8 ">
+                Entertaining, insightful articles that will get your synapses
+                firing and help you live a happier, more resilient, and more
+                connected life.
+              </div>
+              <div>
+                <div className="flex w-fit border-[2px] rounded-[40px] border-[#803401]">
+                  <button className="py-4 px-8 text-lg font-medium rounded-[40px] border-[1px] border-black">
+                    Read The Newsletter
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="realtive flex justify-center items-center px-8">
-            <div className="absolute" ref={containerRef}>
-              <img className="absolute" src={NewsLetterFill} />
-              <img src={NewsLetterCircle} />
-            </div>
+            <div className="realtive flex justify-center items-center px-8">
+              <div
+                className="absolute w-[70vw] sm:w-[50vw] md:w-[50vw] lg:w-[30vw]"
+                ref={containerRef}
+              >
+                <img className="absolute" src={NewsLetterFill} />
+                <img src={NewsLetterCircle} />
+              </div>
 
-            <img ref={imagesRef} className="w-[40vh]" src={NewsLetterImg} />
+              <img
+                ref={imagesRef}
+                className=" w-[40vw] sm:w-[30vw] md:w-[30vw] lg:w-[20vw]"
+                src={NewsLetterImg}
+              />
+            </div>
           </div>
         </div>
       </div>
