@@ -44,33 +44,35 @@ const OurPodcastSection = () => {
   return (
     <section className="podcast-section w-full py-20">
       <div className="px-6 flex flex-col space-y-16">
-        <div className="flex flex-col space-y-6">
-          <div className="text-4xl font-semibold">Our Podcasts</div>
-          <div className="text-lg font-normal tracking-widest leading-8 ">
-            Ten Percent Happier publishes a variety of podcasts that offer
-            relatable wisdom designed to help you meet the challenges and
-            opportunities in your daily life.
-          </div>
-          <div>
-            <div className="flex w-fit border-[2px] rounded-[40px] border-[#803401]">
-              <button className="py-4 px-8 text-lg font-medium rounded-[40px] border-[1px] border-black">
-                See All Books
-              </button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="flex flex-col space-y-6 lg:order-2 lg:justify-center">
+            <div className="text-4xl font-semibold">Our Podcasts</div>
+            <div className="text-lg font-normal tracking-widest leading-8 ">
+              Ten Percent Happier publishes a variety of podcasts that offer
+              relatable wisdom designed to help you meet the challenges and
+              opportunities in your daily life.
+            </div>
+            <div>
+              <div className="flex w-fit border-[2px] rounded-[40px] border-[#803401]">
+                <button className="py-4 px-8 text-lg font-medium rounded-[40px] border-[1px] border-black">
+                  See All Books
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          ref={containerRef}
-          className="realtive flex justify-center items-center"
-        >
-          <img className="absolute  p-8" src={Fill} alt="" />
-          <img className="absolute  p-8" src={Circle} alt="" />
+          <div
+            ref={containerRef}
+            className="realtive flex justify-center items-center w-[70vw] sm:w-[60vw]"
+          >
+            <img className="absolute  p-8" src={Fill} alt="" />
+            <img className="absolute  p-8" src={Circle} alt="" />
 
-          <div ref={imagesRef} className="grid grid-cols-2 grid-rows-2 gap-6">
-            <img className="cols-span-1" src={Img1} alt="" />
-            <img className="cols-span-1" src={Img2} alt="" />
-            <img className="cols-span-1" src={Img3} alt="" />
-            <img className="cols-span-1" src={Img4} alt="" />
+            <div ref={imagesRef} className="grid grid-cols-2 grid-rows-2 gap-6">
+              <img className="cols-span-1" src={Img1} alt="" />
+              <img className="cols-span-1" src={Img2} alt="" />
+              <img className="cols-span-1" src={Img3} alt="" />
+              <img className="cols-span-1" src={Img4} alt="" />
+            </div>
           </div>
         </div>
       </div>
