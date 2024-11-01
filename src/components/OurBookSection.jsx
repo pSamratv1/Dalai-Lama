@@ -80,7 +80,7 @@ const OurBookSection = () => {
                   src={BookCircle}
                   alt="Book decoration"
                 />
-                <img src={Books} alt="Books" />
+                <img className="z-10" src={Books} alt="Books" />
               </div>
             </div>
           </div>
