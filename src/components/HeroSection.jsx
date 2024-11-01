@@ -35,6 +35,7 @@ const HeroSection = () => {
     gsap.from(itemsRef.current.children, {
       y: -100,
       opacity: 0,
+      delay: 0.6,
       duration: 0.6,
       stagger: 0.4,
     });

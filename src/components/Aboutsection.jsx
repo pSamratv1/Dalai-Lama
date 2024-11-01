@@ -101,7 +101,7 @@ const Aboutsection = () => {
           <div id="container" className="lg:col-span-6 lg:order-1">
             <div className="flex lg:justify-center w-full pr-[172px] md:pr-0 pt-12 md:pt-20 ">
               <img
-                className="max-w-[41vw] sm:max-w-[30vw] md:max-w-[28vw] lg:max-w-[30vw]"
+                className="max-w-[41vw] sm:max-w-[30vw] md:max-w-[28vw] lg:max-w-[24vw]"
                 ref={iphoneRef}
                 src={phoneImg}
                 alt="Ten Percent Happiness App"

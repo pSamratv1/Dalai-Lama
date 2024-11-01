@@ -13,32 +13,32 @@ const FooterSection = () => {
   const iconsRef = useRef(null);
 
   useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from(titleRef.current, {
-      y: 200,
+    gsap.from(titleRef.current, {
       opacity: 0,
-
       duration: 0.6,
       scrollTrigger: {
         trigger: titleRef.current,
         start: "top 80%",
       },
     });
-    tl.from(textRef.current.children, {
-      opacity: 0,
-      y: 200,
-      duration: 0.7,
-      scrollTrigger: {
-        trigger: textRef.current,
-        start: "top 80%",
-        toggleActions: "restart none none none",
+    gsap.from(
+      textRef.current.children,
+      {
+        opacity: 0,
+        y: 200,
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+        },
+        stagger: 0.4,
+        scrub: 2,
       },
-      stagger: 0.4,
-      scrub: 2,
-    });
+      "<"
+    );
   });
   return (
-    <section className="footer-section ">
+    <section className="footer-section h-[10vh]">
       <div className="bg-[#291217] text-[#f4f3e9] py-20">
         <div className="container mx-auto px-6 lg:px-16 space-y-12">
           {/* Title and Social Icons */}

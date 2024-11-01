@@ -46,8 +46,10 @@ const OurNewsLetter = () => {
         <div className="flex flex-col  px-8 sm:px-12 md:px-16 lg:px-44 space-y-16 ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="flex flex-col space-y-6 justify-center">
-              <div className="text-4xl font-semibold">The newsletter</div>
-              <div className="text-lg font-normal tracking-widest leading-8 ">
+              <div className="lowerText  font-bold  flex justify-start items-center  space-x-2 sm:space-x-4 sm:text-6xl text-4xl">
+                The Newsletter
+              </div>
+              <div className="text-[18px] sm:text-xl lg:text-2xl lg:min-h-[13vh] font-normal leading-relaxed tracking-widest  text-opacity-90">
                 Entertaining, insightful articles that will get your synapses
                 firing and help you live a happier, more resilient, and more
                 connected life.

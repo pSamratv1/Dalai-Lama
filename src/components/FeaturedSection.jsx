@@ -18,7 +18,7 @@ const FeaturedSection = () => {
     gsap.from(containerRef.current.children, {
       opacity: 0,
       y: 20,
-      stagger: 0.4,
+      stagger: 0.2,
       duration: 0.6,
       ease: "power2.out",
       scrollTrigger: {
