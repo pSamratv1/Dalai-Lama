@@ -1,17 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const FooterSection = () => {
+  const textRef = useRef(null);
+
+  const titleRef = useRef(null);
+  const iconsRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.from(titleRef.current, {
+      y: 200,
+      opacity: 0,
+
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 80%",
+      },
+    });
+    tl.from(textRef.current.children, {
+      opacity: 0,
+      y: 200,
+      duration: 0.7,
+      scrollTrigger: {
+        trigger: textRef.current,
+        start: "top 80%",
+        toggleActions: "restart none none none",
+      },
+      stagger: 0.4,
+      scrub: 2,
+    });
+  });
   return (
-    <section className="footer-section">
+    <section className="footer-section ">
       <div className="bg-[#291217] text-[#f4f3e9] py-20">
         <div className="container mx-auto px-6 lg:px-16 space-y-12">
           {/* Title and Social Icons */}
-          <div className="flex flex-col space-y-4">
+          <div ref={titleRef} className="flex flex-col space-y-4">
             <div className="text-3xl font-light leading-snug">
               TEN PERCENT HAPPIER
             </div>
-            <div className="flex space-x-4">
+            <div ref={iconsRef} className="flex space-x-4">
               <FaTwitter className="w-5 h-5" />
               <FaFacebookF className="w-5 h-5" />
               <FaInstagram className="w-5 h-5" />
@@ -19,7 +54,10 @@ const FooterSection = () => {
           </div>
 
           {/* Grid Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 lg:gap-8">
+          <div
+            ref={textRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 lg:gap-8"
+          >
             <div className="flex flex-col space-y-5">
               <div className="text-[#7D7D7D] pb-1 border-b border-[#7D7D7D]">
                 <div className="uppercase tracking-[0.18rem] text-[15px]">

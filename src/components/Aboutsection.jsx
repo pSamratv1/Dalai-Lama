@@ -36,6 +36,7 @@ const Aboutsection = () => {
         opacity: 0,
         y: 100,
         duration: 0.6,
+
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 80%",

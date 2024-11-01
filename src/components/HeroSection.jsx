@@ -10,6 +10,8 @@ const HeroSection = () => {
   gsap.registerPlugin(useGSAP);
 
   // Nabvar Ref
+  const menuRef = useRef(null);
+  const itemsRef = useRef(null);
   const chevronRef = useRef(null);
   const dropdownRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -25,6 +27,17 @@ const HeroSection = () => {
 
   // GSAP animation for dropdown visibility on hover
   useGSAP(() => {
+    gsap.from(menuRef.current, {
+      y: -100,
+      opacity: 0,
+      duration: 0.6,
+    });
+    gsap.from(itemsRef.current.children, {
+      y: -100,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.4,
+    });
     gsap.fromTo(
       dropdownRef.current,
       { opacity: 0, y: 50 }, // Start state: hidden & below
@@ -56,7 +69,7 @@ const HeroSection = () => {
     });
 
     tl.from(
-      textRef.current,
+      textRef.current.children,
       {
         y: 50,
         opacity: 0,
@@ -77,17 +90,21 @@ const HeroSection = () => {
 
   return (
     <div className="h-full overflow-hidden flex flex-col">
-      <section className="fixed h-[80px] w-full lg:px-32 px-8 flex justify-between bg-[#f4f3e9] z-20 ">
+      <section className="fixed h-[70px] w-full lg:px-32 px-8 flex justify-between bg-[#f4f3e9] z-20 ">
         {/* Logo Section */}
         <div className="flex w-full h-full justify-between items-center">
           <img
+            ref={menuRef}
             className="logo h-13 cursor-pointer"
             src={Logo}
             alt="The Dalai Lama"
           />
 
           {/* Navigation Links */}
-          <div className="flex h-18 text-xl font-[600] gap-6 py-4 items-center ">
+          <div
+            ref={itemsRef}
+            className="flex h-18 text-xl font-[600] gap-6 py-4 items-center "
+          >
             {/* Podcast Dropdown */}
             <div
               className="relative lg:flex hidden items-center gap-2 cursor-pointer h-8 "

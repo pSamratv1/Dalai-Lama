@@ -38,15 +38,17 @@ const TeacherSection = () => {
         },
         scrub: 2,
       });
-      gsap.from(teachersRef.current, {
+      gsap.from(teachersRef.current.children, {
         opacity: 0,
         y: 200,
         duration: 0.7,
+
         scrollTrigger: {
           trigger: teachersRef.current,
           start: "top 90%",
           toggleActions: "restart none none none",
         },
+        stagger: 0.4,
         scrub: 2,
       });
     });
@@ -63,10 +65,11 @@ const TeacherSection = () => {
         },
         scrub: 2,
       });
-      gsap.from(teachersRef.current, {
+      gsap.from(teachersRef.current.children, {
         opacity: 0,
         y: 200,
         duration: 0.7,
+        stagger: 0.4,
         scrollTrigger: {
           trigger: teachersRef.current,
           start: "top 80%",
