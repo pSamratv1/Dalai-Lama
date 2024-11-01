@@ -35,31 +35,35 @@ const FeaturedSection = () => {
       <section className="h-[50vh] py-20 px-8 sm:px-12 md:px-16 lg:px-44 bg-[#291217]">
         <div
           ref={containerRef}
-          className="grid grid-cols-2 gap-4 md:grid-cols-4 px-6 items-center"
+          className="grid grid-cols-2 gap-8 lg:gap-4 md:grid-cols-4 px-6 items-center"
         >
           <img
-            className="w-[15vw] h-auto mx-auto"
+            className="w-[35vw] lg:w-[15vw] h-auto mx-auto"
             src={NewYorkTimes}
             alt="The New York Times"
           />
-          <img className="w-[12vw] h-auto mx-auto" src={Rachel} alt="Rachael" />
           <img
-            className="w-[12vw] h-auto mx-auto"
+            className="lg:w-[12vw] h-auto mx-auto"
+            src={Rachel}
+            alt="Rachael"
+          />
+          <img
+            className="w-[30vw] lg:w-[12vw] h-auto mx-auto"
             src={GmAmerica}
             alt="Good Morning America"
           />
           <img
-            className="w-[15vw] h-auto mx-auto"
+            className="w-[35vw] lg:w-[15vw] h-auto mx-auto"
             src={WashingTon}
             alt="The Washington Post"
           />
           <img
-            className="w-[12vw] h-auto mx-auto md:col-span-2"
+            className="w-[30vw] lg:w-[12vw] h-auto mx-auto md:col-span-2"
             src={TheView}
             alt="The View"
           />
           <img
-            className="w-[12vw] h-auto mx-auto md:col-span-2"
+            className="w-[30vw] lg:w-[12vw] h-auto mx-auto md:col-span-2"
             src={Trevor}
             alt="The Trevor Noah Show"
           />
